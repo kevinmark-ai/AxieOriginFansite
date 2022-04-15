@@ -1,0 +1,70 @@
+div{
+  display: block;
+}
+ul {
+display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  margin-right: 6%;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+img{
+  height: 130%;
+  width: 130%;
+}
+
+link {
+  display: none;
+}
+
+
+button{
+  border: 0ch;
+  color: transparent;
+  background-color: transparent;
+}
+
+.card {
+  text-align: center;
+  display: inline-block;
+  border-radius: 3px;
+  background-position: top center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card:after {
+  content: '';
+  position: absolute;
+  width: 130%;
+  height: 8px;
+  border-radius: 50%;
+  left: 0;
+  bottom: 0px;
+  -webkit-box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);
+}
+/*# sourceMappingURL=styles.css.map */
+
+body {
+  font-family: Muli,sans-serif;
+}
