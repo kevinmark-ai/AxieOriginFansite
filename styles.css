@@ -1,3 +1,6 @@
+:root{
+  --cardBackground: url("cardBackground.png");
+}
 div{
   display: block;
 }
@@ -11,7 +14,20 @@ display: flex;
 .container{
   display: flex;
   justify-content: center;
-  margin-right: 6%;
+  height: 100%;
+  filter: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+.backgroundHolder{
+  background-image: var(--cardBackground);
+  background-size: 160%;
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center;
+height: 800px;
 }
 
 *, :after, :before {
@@ -19,8 +35,9 @@ display: flex;
 }
 
 img{
-  height: 130%;
-  width: 130%;
+  height: 100%;
+  width: 100%;
+  filter: none;
 }
 
 link {
@@ -55,16 +72,93 @@ button{
 .card:after {
   content: '';
   position: absolute;
-  width: 130%;
+  width: 100%;
   height: 8px;
-  border-radius: 50%;
-  left: 0;
-  bottom: 0px;
-  -webkit-box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 70%;
+  left: 20px;
+  bottom: 80px;
+  -webkit-box-shadow: 0 30px 20px rgba(0, 0, 0, 1);
+          box-shadow: 0 30px 20px rgba(0, 0, 0, 1);
 }
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles.css.map */  
 
+.link {
+  width: 60px;
+  height: 440px;
+  right: 20px;
+  top: 50%;
+  position: fixed;
+  z-index: 9;
+  margin: -220px 0 0 0;
+}
+
+.link a.l1 {
+  background-position: 0 0px;
+}
+.link a {
+  display: block;
+  background: url(https://www.illusionconnectgame.com/images/temp200821/link1.png) center top no-repeat;
+  width: 60px;
+  height: 60px;
+}
+
+.link a.l2 {
+  background-position: 0 -80px;
+}
+
+
+.link a.l3 {
+  background-position: 0 -150px;
+}
+
+.link a.l4 {
+  background-position: 0 -220px;
+}
+
+.link a.l5 {
+  background-position: 0 -290px;
+}
+
+.link a.l6 {
+  background: none;
+}
+
+.link a.l6 .circle {
+  width: 27px;
+  height: 27px;
+  background: url(https://www.illusionconnectgame.com/images/temp200821/music2.png) center top no-repeat;
+  position: relative;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.link a.l6.on .circle span {
+  animation: rcircle 2s linear .3s infinite;
+  -webkit-animation: rcircle 2s linear .3s infinite;
+}
+.link a.l6 .circle span {
+  width: 27px;
+  height: 27px;
+  display: block;
+  position: absolute;
+  background: url(https://www.illusionconnectgame.com/images/temp200821/music1.png)
+}
+a, a:hover {
+  text-decoration: none;
+}
+a {
+  -webkit-user-select: none;
+  user-select: none;
+  color: inherit;
+}
+a{
+padding-top: 10px;
+    word-break: break-all;
+    word-wrap: break-word;
+    outline: none;
+}
 body {
   font-family: Muli,sans-serif;
+  padding: 0%;
+  margin: 0%;
 }
