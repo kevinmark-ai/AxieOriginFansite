@@ -47,7 +47,7 @@
             href="https://discord.com/invite/axie"
             target="_blank"
           ></a>
-          <a class="l6">
+          <a class="l6" id="switch">
             <div class="circle">
               <span id="icon"></span>
             </div>
@@ -60,19 +60,19 @@
     </audio>
     <script>
       var _audio = document.getElementById("bgm");
-      var icon = document.getElementsByClassName("l6");
-      var icon = document.getElementById("icon");
+      var icon = document.getElementById("switch");
       var bgmSwitch = true;
-      isPlay();
-      function isPlay() {
+      function isPlay(bgmSwitch) {
         if (bgmSwitch) {
           _audio.play();
+        } else {
+          _audio.pause();
         }
       }
+      isPlay(bgmSwitch);
       icon.onclick = function () {
-        _audio.pause();
         bgmSwitch = !bgmSwitch;
-        isPlay();
+        isPlay(bgmSwitch);
       };
     </script>
     <script
