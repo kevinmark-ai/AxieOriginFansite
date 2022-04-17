@@ -1,5 +1,6 @@
 :root{
-  --cardBackground: url("cardBackground.png");
+  --cardBackground: url("woodAdventure.png");
+  --musicIcon: url("musicIcon.png");
 }
 div{
   display: block;
@@ -16,20 +17,35 @@ display: flex;
   justify-content: center;
   height: 100%;
   filter: none;
+z-index: 1;
 }
+
 
 * {
   box-sizing: border-box;
 }
 .backgroundHolder{
   background-image: var(--cardBackground);
-  background-size: 160%;
   background-size: cover;
   background-repeat:no-repeat;
   background-position: center;
-height: 800px;
+height: 770px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
+#myModal{
+  margin: 7% 10% 3%;
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0;
+}
+
+#modalContainer .show{
+  opacity:1;
+}
 *, :after, :before {
   box-sizing: border-box;
 }
@@ -49,6 +65,7 @@ button{
   border: 0ch;
   color: transparent;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .card {
@@ -67,7 +84,10 @@ button{
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+z-index: 2;
 }
+
+ 
 
 .card:after {
   content: '';
@@ -86,7 +106,7 @@ button{
   width: 60px;
   height: 440px;
   right: 20px;
-  top: 50%;
+  top: 55%;
   position: fixed;
   z-index: 9;
   margin: -220px 0 0 0;
@@ -121,28 +141,56 @@ button{
 
 .link a.l6 {
   background: none;
+  padding-right: 5px;
 }
 
 .link a.l6 .circle {
-  width: 27px;
-  height: 27px;
-  background: url(https://www.illusionconnectgame.com/images/temp200821/music2.png) center top no-repeat;
+  width: 40px;
+  height: 30px;
   position: relative;
-  margin: 10px auto;
+  margin-top: 10px;
+  margin-left:auto;
+  margin-right:auto;
+  animation: 1.5s ease 0s infinite beat;
+
+  background: url("musicIcon.png") center top no-repeat;
+
   cursor: pointer;
 }
+.link a.l6 .on .circle {
+  width: 40px;
+  height: 30px;
+  position: relative;
+  margin-top: 10px;
+  margin-left:auto;
+  margin-right:auto;
+
+  background: url("musicIcon.png") center top no-repeat;
+
+  cursor: pointer;
+}
+
+@keyframes beat {
+  0%, 50%, 100% { transform: scale(1, 1); }
+  30%, 80% { transform: scale(0.92, 0.95); }
+}
+
 
 .link a.l6.on .circle span {
   animation: rcircle 2s linear .3s infinite;
   -webkit-animation: rcircle 2s linear .3s infinite;
+  
 }
-.link a.l6 .circle span {
-  width: 27px;
-  height: 27px;
+/* .link a.l6 .circle span {
+  width: 30px;
+  height: 30px;
   display: block;
   position: absolute;
-  background: url(https://www.illusionconnectgame.com/images/temp200821/music1.png)
+  margin: 0px auto 10px auto;
+  background: url(https://www.illusionconnectgame.com/images/temp200821/music1.png) center top no-repeat;
 }
+   */
+
 a, a:hover {
   text-decoration: none;
 }

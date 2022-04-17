@@ -7,61 +7,56 @@
     <title>Axie Origin Education</title>
 
     <link rel="stylesheet" href="styles.css" />
+    <script src="myscript.js"></script>
   </head>
   <body>
-    <div class="backgroundHolder">
+    <div class="backgroundHolder cardFeatureContainer">
+      <div id="myModal" class="modal">
+        <button id="modalClose"><img src="modal.png" alt="" /></button>
+      </div>
       <div class="container">
         <ul>
           <div class="card">
-            <button href="#"><img src="Beech.jpg" /></button>
-            <!-- <div class="energy-txt-card">2</div>
-            <div class="point-txt-card">90</div>
-            <div class="des-txt-card">
-              <p>Gain 75 shield.</p>
-            </div> -->
+            <button id="myBtn"><img src="Beech.jpg" /></button>
           </div>
         </ul>
-        <div class="link">
-          <a
-            class="l1"
-            href="https://www.facebook.com/AxieInfinity"
-            target="_blank"
-          ></a>
-          <a
-            class="l2"
-            href="https://twitter.com/AxieInfinity"
-            target="_blank"
-          ></a>
-          <a
-            class="l3"
-            href="https://www.youtube.com/c/AxieInfinity"
-            target="_blank"
-          ></a>
-          <a
-            class="l4"
-            href="https://www.instagram.com/axieinfinity/"
-            target="_blank"
-          ></a>
-          <a
-            class="l5"
-            href="https://discord.com/invite/axie"
-            target="_blank"
-          ></a>
-          <a class="l6" id="switch">
-            <div class="circle">
-              <span id="icon"></span>
-            </div>
-          </a>
-        </div>
       </div>
     </div>
+
+    <div class="link">
+      <a
+        class="l1"
+        href="https://www.facebook.com/AxieInfinity"
+        target="_blank"
+      ></a>
+      <a class="l2" href="https://twitter.com/AxieInfinity" target="_blank"></a>
+      <a
+        class="l3"
+        href="https://www.youtube.com/c/AxieInfinity"
+        target="_blank"
+      ></a>
+      <a
+        class="l4"
+        href="https://www.instagram.com/axieinfinity/"
+        target="_blank"
+      ></a>
+      <a class="l5" href="https://discord.com/invite/axie" target="_blank"></a>
+      <a class="l6" id="switch">
+        <div class="circle">
+          <span id="icon"></span>
+        </div>
+      </a>
+    </div>
+
     <audio id="bgm" loop="">
       <source src="OriginOst.mp3" type="audio/mp3" />
     </audio>
+
     <script>
       var _audio = document.getElementById("bgm");
       var icon = document.getElementById("switch");
       var bgmSwitch = true;
+      _audio.play();
       function isPlay(bgmSwitch) {
         if (bgmSwitch) {
           _audio.play();
@@ -69,17 +64,33 @@
           _audio.pause();
         }
       }
-      isPlay(bgmSwitch);
       icon.onclick = function () {
         bgmSwitch = !bgmSwitch;
         isPlay(bgmSwitch);
       };
+
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("myBtn");
+      var closeModal = document.getElementById("modalClose");
+      var cardContainer = document.getElementsByClassName("container");
+      btn.onclick = function () {
+        modal.style.opacity = "1";
+        modal.style.pointerEvents = "all";
+        btn.style.opacity = "0";
+      };
+      closeModal.onclick = function () {
+        modal.style.opacity = "0";
+        modal.style.pointerEvents = "none";
+        btn.style.opacity = "1";
+      };
     </script>
+
     <script
       class="vanillaTilt"
       type="text/javascript"
       src="vanilla-tilt.js"
     ></script>
+
     <script class="vanillaTilt">
       VanillaTilt.init(document.querySelector(".card"), {
         max: 25,
