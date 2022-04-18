@@ -11,28 +11,31 @@
   </head>
   <body>
     <!-- First section -->
-    <div class="backgroundHolder cardFeatureContainer">
-      <div id="myModal" class="modal">
-        <button id="modalClose"><img src="image 3.png" alt="" /></button>
-      </div>
-      <div class="container">
-        <ul>
-          <div class="card">
-            <button id="myBtn"><img src="Beech.jpg" /></button>
+    <div class="firstSection">
+      <div class="backgroundHolder cardFeatureContainer">
+        <div class="full-wh">
+          <!-- STAR ANIMATION -->
+          <div class="bg-animation">
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+            <div id="stars4"></div>
           </div>
-        </ul>
+          <!-- / STAR ANIMATION -->
+        </div>
+        <div id="myModal" class="modal">
+          <button id="modalClose"><img src="image 3.png" alt="" /></button>
+        </div>
+        <div class="container">
+          <ul>
+            <div class="card">
+              <button id="myBtn">
+                <img src="Beech.jpg" />
+              </button>
+            </div>
+          </ul>
+        </div>
       </div>
-    </div>
-
-    <div class="full-wh">
-      <!-- STAR ANIMATION -->
-      <div class="bg-animation">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
-        <div id="stars4"></div>
-      </div>
-      <!-- / STAR ANIMATION -->
     </div>
 
     <div class="link">
@@ -67,38 +70,7 @@
       document.getElementById("bgm").play();
     </script>
 
-    <script>
-      var _audio = document.getElementById("bgm");
-      var icon = document.getElementById("switch");
-      var bgmSwitch = true;
-      _audio.play();
-      function isPlay(bgmSwitch) {
-        if (bgmSwitch) {
-          _audio.play();
-        } else {
-          _audio.pause();
-        }
-      }
-      icon.onclick = function () {
-        bgmSwitch = !bgmSwitch;
-        isPlay(bgmSwitch);
-      };
-
-      var modal = document.getElementById("myModal");
-      var btn = document.getElementById("myBtn");
-      var closeModal = document.getElementById("modalClose");
-      var cardContainer = document.getElementsByClassName("card");
-      btn.onclick = function () {
-        modal.style.opacity = "1";
-        modal.style.pointerEvents = "all";
-        btn.style.opacity = "0";
-      };
-      closeModal.onclick = function () {
-        modal.style.opacity = "0";
-        modal.style.pointerEvents = "none";
-        btn.style.opacity = "1";
-      };
-    </script>
+    <script src="myscript.js"></script>
 
     <script
       class="vanillaTilt"
@@ -117,6 +89,41 @@
     </script>
 
     <!-- Second section -->
-    <div class="backgroundHolder2"></div>
+    <div class="secondSection">
+      <div class="backgroundHolder2">
+        <div class="container2">
+          <h1>PVP GAME MODES</h1>
+
+          <div class="banners">
+            <img
+              class="banner practiceBanner"
+              src="practiceBanner.png"
+              alt="Practice Mode"
+            />
+            <img
+              class="banner rankedBanner"
+              src="rankedBanner.png"
+              alt="Ranked Mode"
+            />
+            <img
+              class="banner tournamentBanner"
+              src="tournamentBanner.png"
+              alt="Tournament Mode"
+              title="Coming Soon!"
+            />
+          </div>
+
+          <script></script>
+        </div>
+      </div>
+      <div class="pvpModal"></div>
+      <div class="practiceModal">
+        <h2>Practice Mode</h2>
+        <p>
+          Practice with other players with nothing at stake. <br />Reward(s): 1
+          EXP
+        </p>
+      </div>
+    </div>
   </body>
 </html>

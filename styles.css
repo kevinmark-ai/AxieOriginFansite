@@ -1,11 +1,9 @@
 :root{
   --cardBackground: url("woodAdventure.png");
   --musicIcon: url("musicIcon.png");
-  --background2:url();
+  --background2:url("backdropWood.png");
 }
-div{
-  display: block;
-}
+
 ul {
 display: flex;
     flex-wrap: wrap;
@@ -46,9 +44,7 @@ align-items: center;
   padding: 20px;
 }
 
-#modalContainer .show{
-  opacity:1;
-}
+
 *, :after, :before {
   box-sizing: border-box;
 }
@@ -215,7 +211,7 @@ body {
 */
 
 .full-wh {
-  position: absolute;
+  position:absolute;
   top: 0px;
   left: 0px;
   bottom: 0px;
@@ -223,7 +219,7 @@ body {
 }
 
 .bg-animation {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -232,7 +228,7 @@ body {
 
 
 .bg-animation{
-position: fixed;
+position: absolute;
 top: 0;
 left: 0;
 width: 100%;
@@ -351,5 +347,69 @@ to {
 }
 }
 
+/* second section */
+.secondSection {
+  z-index: 1;
+  min-width: fit-content;
+  display: flex;
+  flex-direction: column;
 
+}
 
+.backgroundHolder2{
+  background-image: var(--background2);
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center;
+height: 770px;
+}
+
+.container2{
+  max-width: cover;
+  max-height: fit-content;
+  display: flex;
+  align-items: center;
+flex-flow: column;
+padding: 0%;
+}
+
+.banners{
+max-width: cover;
+display: flex;
+gap: 20px;
+}
+
+.banner{
+  width: 372px;
+  height: 533px;
+  cursor: pointer;
+}
+
+.banner:hover{
+  height: 605px; 
+}
+
+h1{
+  color: #FFF;
+  padding: 50px;
+  justify-self: end;
+  padding: 0%;
+}
+
+.practiceModal {
+  background-color: #055d71;
+  z-index: 4;
+  padding: 10px;
+  position: absolute;
+
+  /* transform: translate(-50%, -50%) scale(1); */
+}
+
+h2,p{
+  color: #FFF;
+}
+
+h2{
+  border-bottom: 1px #FFF;
+
+}
