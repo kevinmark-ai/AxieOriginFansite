@@ -10,9 +10,10 @@
     <script src="myscript.js"></script>
   </head>
   <body>
+    <!-- First section -->
     <div class="backgroundHolder cardFeatureContainer">
       <div id="myModal" class="modal">
-        <button id="modalClose"><img src="modal.png" alt="" /></button>
+        <button id="modalClose"><img src="image 3.png" alt="" /></button>
       </div>
       <div class="container">
         <ul>
@@ -21,6 +22,17 @@
           </div>
         </ul>
       </div>
+    </div>
+
+    <div class="full-wh">
+      <!-- STAR ANIMATION -->
+      <div class="bg-animation">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="stars4"></div>
+      </div>
+      <!-- / STAR ANIMATION -->
     </div>
 
     <div class="link">
@@ -48,7 +60,7 @@
       </a>
     </div>
 
-    <audio id="bgm" loop="">
+    <audio id="bgm" loop="" autoplay="true">
       <source src="OriginOst.mp3" type="audio/mp3" />
     </audio>
 
@@ -72,7 +84,7 @@
       var modal = document.getElementById("myModal");
       var btn = document.getElementById("myBtn");
       var closeModal = document.getElementById("modalClose");
-      var cardContainer = document.getElementsByClassName("container");
+      var cardContainer = document.getElementsByClassName("card");
       btn.onclick = function () {
         modal.style.opacity = "1";
         modal.style.pointerEvents = "all";
@@ -100,5 +112,8 @@
       //It also supports NodeList
       VanillaTilt.init(document.querySelectorAll(".card"));
     </script>
+
+    <!-- Second section -->
+    <div class="backgroundHolder2"></div>
   </body>
 </html>
