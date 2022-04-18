@@ -350,9 +350,7 @@ to {
 /* second section */
 .secondSection {
   z-index: 1;
-  min-width: fit-content;
-  display: flex;
-  flex-direction: column;
+display: grid;  
 
 }
 
@@ -396,13 +394,20 @@ h1{
   padding: 0%;
 }
 
+.pvpModal{
+  height:100%;
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .practiceModal {
   background-color: #055d71;
-  z-index: 4;
   padding: 10px;
-  position: absolute;
-
-  /* transform: translate(-50%, -50%) scale(1); */
+  
 }
 
 h2,p{
