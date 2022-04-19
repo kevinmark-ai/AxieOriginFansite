@@ -100,14 +100,14 @@
                 alt="Practice Mode"
               />
             </button>
-            <button>
+            <button id="rankedModeBtn">
               <img
                 class="banner rankedBanner"
                 src="rankedBanner.png"
                 alt="Ranked Mode"
               />
             </button>
-            <button>
+            <button id="tournamentModeBtn">
               <img
                 class="banner tournamentBanner"
                 src="tournamentBanner.png"
@@ -125,12 +125,46 @@
             <div class="modalText">
               <h2>Practice Mode</h2>
               <p>Battle against other players with nothing at stake.</p>
-              <p><br />Win Reward(s): 1 EXP</p>
+              <p>
+                <br />Win Reward(s): <br />
+                + 1 EXP
+              </p>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div id="pvpModal1">
+        <button id="rankedModalBtn">
+          <div id="rankedModal">
+            <img class="rankedBannerModal" src="rankedBanner.png" alt=" " />
+            <div class="modalText">
+              <h2>Ranked Mode</h2>
+              <p>
+                Battle against other players and climb up the ranks by winning.
+              </p>
+              <p><br />Win Reward(s): <br />+ EXP <br />+ 2 Stars</p>
+              <p><br />Lose Recompense(s): <br />- 1 Star</p>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div id="pvpModal2">
+        <button id="tournamentModalBtn">
+          <div id="tournamentModal">
+            <img
+              class="tournamentBannerModal"
+              src="tournamentBanner.png"
+              alt=" "
+            />
+            <div class="modalText">
+              <h2>Tournament Mode</h2>
+              <p>Coming soon. Brace yourself.</p>
             </div>
           </div>
         </button>
       </div>
     </div>
+    <div class="test"></div>
     <script src="myscript.js"></script>
   </body>
 </html>

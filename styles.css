@@ -382,14 +382,14 @@ align-items: flex-start;
 }
 
 .banner{
-  width: 372px;
-  height: 533px;
+  width: 418px;
+  height: 600px;
   cursor: pointer;
   pointer-events: all;
 }
 
 .banner:hover{
-  height: 605px; 
+  height: 650px; 
 }
 
 h1{
@@ -432,6 +432,71 @@ h1{
   justify-content: space-evenly;
 }
 
+#pvpModal1{
+  height:100%;
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.rankedBannerModal{
+  height: 30%;
+  width: 30%;
+  flex-wrap: wrap;
+}
+
+
+#rankedModal {
+  background-color: #A9294A;
+  padding: 10px;
+  opacity: 1;
+  pointer-events: none;
+  display: flex;
+  height: 20%;
+  max-width: auto;
+  padding-left: 0%;
+  justify-content: space-evenly;
+}
+
+
+#pvpModal2{
+  height:100%;
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.tournamentBannerModal{
+  height: 30%;
+  width: 30%;
+  flex-wrap: wrap;
+}
+
+
+#tournamentModal {
+  background-color: #484f02;
+  padding: 10px;
+  opacity: 1;
+  pointer-events: none;
+  display: flex;
+  height: 20%;
+  max-width: auto;
+  padding-left: 0%;
+  justify-content: space-evenly;
+}
+
 h2,p{
   color: #FFF;
   margin: 0%;
@@ -446,5 +511,7 @@ h2,p{
   gap: 20px;
   font-size: larger;
 }
-
-
+.test{
+background-color: #484f02;
+height: 100px;
+}

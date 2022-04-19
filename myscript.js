@@ -42,3 +42,30 @@ pvpModal.onclick = function () {
   pvpModal.style.pointerEvents = "none";
 
 }
+
+var pvpModal1 = document.getElementById("pvpModal1");
+var rankedModeBtn = document.getElementById("rankedModeBtn");
+var rankedModalBtn = document.getElementById("rankedModalBtn");
+var rankedModal = document.getElementsByClassName("rankedModal");
+rankedModeBtn.onclick = function () {
+  pvpModal1.style.opacity = "1";
+  pvpModal1.style.pointerEvents = "all";
+};
+pvpModal1.onclick = function () {
+    pvpModal1.style.opacity = "0";
+  pvpModal1.style.pointerEvents = "none";
+};
+
+
+var pvpModal2 = document.getElementById("pvpModal2");
+var tournamentModeBtn = document.getElementById("tournamentModeBtn");
+var tournamentModalBtn = document.getElementById("tournamentModalBtn");
+var tournamentModal = document.getElementsByClassName("tournamentModal");
+tournamentModeBtn.onclick = function () {
+  pvpModal2.style.opacity = "1";
+  pvpModal2.style.pointerEvents = "all";
+};
+pvpModal2.onclick = function () {
+    pvpModal2.style.opacity = "0";
+  pvpModal2.style.pointerEvents = "none";
+};
