@@ -65,6 +65,8 @@ button{
   color: transparent;
   background-color: transparent;
   cursor: pointer;
+  size: 100%;
+  max-height: max-content;
 }
 
 .card {
@@ -375,12 +377,15 @@ padding: 0%;
 max-width: cover;
 display: flex;
 gap: 20px;
+display: flex;
+align-items: flex-start;
 }
 
 .banner{
   width: 372px;
   height: 533px;
   cursor: pointer;
+  pointer-events: all;
 }
 
 .banner:hover{
@@ -394,7 +399,7 @@ h1{
   padding: 0%;
 }
 
-.pvpModal{
+#pvpModal{
   height:100%;
   width: 100%;
   position: absolute;
@@ -402,19 +407,44 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-.practiceModal {
+.practiceBannerModal{
+  height: 30%;
+  width: 30%;
+  flex-wrap: wrap;
+}
+
+
+
+#practiceModal {
   background-color: #055d71;
   padding: 10px;
-  
+  opacity: 1;
+  pointer-events: none;
+  display: flex;
+  height: 20%;
+  width: max-content;
+  padding-left: 0%;
+  justify-content: space-evenly;
 }
 
 h2,p{
   color: #FFF;
+  margin: 0%;
 }
 
-h2{
-  border-bottom: 1px #FFF;
-
+.modalText{
+  display: flex;
+  flex-direction: column;
+  margin: 0%;
+  justify-content: center;
+  padding: 40px;
+  gap: 20px;
+  font-size: larger;
 }
+
+

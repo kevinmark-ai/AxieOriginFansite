@@ -7,7 +7,6 @@
     <title>Axie Origin Education</title>
 
     <link rel="stylesheet" href="styles.css" />
-    <script src="myscript.js"></script>
   </head>
   <body>
     <!-- First section -->
@@ -70,8 +69,6 @@
       document.getElementById("bgm").play();
     </script>
 
-    <script src="myscript.js"></script>
-
     <script
       class="vanillaTilt"
       type="text/javascript"
@@ -95,37 +92,45 @@
           <h1>PVP GAME MODES</h1>
 
           <div class="banners">
-            <img
-              class="banner practiceBanner"
-              src="practiceBanner.png"
-              alt="Practice Mode"
-            />
-            <img
-              class="banner rankedBanner"
-              src="rankedBanner.png"
-              alt="Ranked Mode"
-            />
-            <img
-              class="banner tournamentBanner"
-              src="tournamentBanner.png"
-              alt="Tournament Mode"
-              title="Coming Soon!"
-            />
+            <button id="practiceModeBtn">
+              <img
+                class="banner"
+                id="practiceBanner"
+                src="practiceBanner.png"
+                alt="Practice Mode"
+              />
+            </button>
+            <button>
+              <img
+                class="banner rankedBanner"
+                src="rankedBanner.png"
+                alt="Ranked Mode"
+              />
+            </button>
+            <button>
+              <img
+                class="banner tournamentBanner"
+                src="tournamentBanner.png"
+                alt="Tournament Mode"
+                title="Coming Soon!"
+              />
+            </button>
           </div>
-
-          <script></script>
         </div>
       </div>
-
-      <div class="pvpModal">
-        <div class="practiceModal">
-          <h2>Practice Mode</h2>
-          <p>
-            Practice with other players with nothing at stake. <br />Reward(s):
-            1 EXP
-          </p>
-        </div>
+      <div id="pvpModal">
+        <button id="practiceModalBtn">
+          <div id="practiceModal">
+            <img class="practiceBannerModal" src="practiceBanner.png" alt=" " />
+            <div class="modalText">
+              <h2>Practice Mode</h2>
+              <p>Battle against other players with nothing at stake.</p>
+              <p><br />Win Reward(s): 1 EXP</p>
+            </div>
+          </div>
+        </button>
       </div>
     </div>
+    <script src="myscript.js"></script>
   </body>
 </html>

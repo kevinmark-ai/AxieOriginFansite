@@ -29,6 +29,16 @@ closeModal.onclick = function () {
   btn.style.opacity = "1";
 };
 
-var practiceBanner = document.getElementsByClassName("practiceBanner")
-var rankedBanner = document.getElementsByClassName("rankedBanner")
-var tournamentBanner = document.getElementsByClassName("tournamentBanner")
+var pvpModal = document.getElementById("pvpModal");
+var practiceModeBtn = document.getElementById("practiceModeBtn");
+var practiceModalBtn = document.getElementById("practiceModalBtn");
+var practiceModal = document.getElementsByClassName("practiceModal");
+practiceModeBtn.onclick = function () {
+  pvpModal.style.opacity = "1";
+  pvpModal.style.pointerEvents = "all";
+};
+pvpModal.onclick = function () {
+    pvpModal.style.opacity = "0";
+  pvpModal.style.pointerEvents = "none";
+
+}
