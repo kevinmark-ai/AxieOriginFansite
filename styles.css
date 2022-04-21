@@ -366,12 +366,12 @@ display: grid;
   background-size: cover;
   background-repeat:no-repeat;
   background-position: center;
-height: 770px;
+min-height: 770px;
 }
 
 .container2{
   max-width: cover;
-  max-height: fit-content;
+  min-height: fit-content;
   display: flex;
   align-items: center;
 flex-flow: column;
@@ -383,6 +383,8 @@ max-width: cover;
 display: flex;
 gap: 20px;
 align-items: flex-start;
+flex-wrap: wrap;
+justify-content: center;
 }
 
 .banner{
@@ -527,6 +529,9 @@ h2,p{
   background-repeat:no-repeat;
   background-position: center;
 height: 770px;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .thirdSection div{
@@ -547,29 +552,28 @@ padding: 0%;
 }
 .axiesContainer{
   display: flex ;
-  flex-direction: column;
-margin-top: 500px;
 }
 
 
 
-.axies img{
+
+
+.axiesImg{
   height: 100%;
   width: 100%;
 }
 .axies{
   justify-content: space-evenly;
   display: flex;
-  margin-top: 90px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
-.axieTypes{
-  justify-content: space-evenly;
-  gap: 90px;
-  display: flex;
-}
 
-.axieTypes img{
-  height: auto;
-  width: auto;
+.a1{
+  height: 62.4px; 
+  width: 63.94px;
+
 }
